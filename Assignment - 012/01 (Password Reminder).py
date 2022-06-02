@@ -11,7 +11,7 @@ Write a program that
 name = "Joseph"
 password = "WQ12"
 
-first_name = input("Enter your first name: ")
+first_name = input("Please enter your first name: ")
 
 if first_name.title() == name :
   print(f"Hello, Joseph! Then password is : {password} ")
