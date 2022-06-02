@@ -1,0 +1,37 @@
+"""
+Task : Find out if the given word is "comfortable words" in relation to the ten-finger keyboard use.
+
+    A comfortable word is a word which you can type always alternating the hand you type with (assuming you type using a Q-keyboard and use of the ten-fingers standard).
+    The word will always be a string consisting of only letters from a to z.
+    Write a program which returns True if it's a comfortable word or False otherwise.
+
+"""
+
+comfortable_word = input("Please enter a word: ")
+
+right = ['q', 'w', 'e', 'r', 't', 'a', 's', 'd', 'f', 'g', 'z', 'x', 'c', 'v', 'b']
+left = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm']
+
+left_counter = 0
+right_counter = 0
+
+for i in comfortable_word:
+  if i in right:
+    if i in left:
+      pass
+    else:
+      right_counter += 1
+  elif i in left:
+    if i in right:
+      pass
+    else:
+      left_counter += 1
+
+if right_counter == 0:
+  if left_counter == len(comfortable_word):
+    print(False)
+elif left_counter == 0:
+  if right_counter == len(comfortable_word):
+    print(False)
+else:
+  print(True)
