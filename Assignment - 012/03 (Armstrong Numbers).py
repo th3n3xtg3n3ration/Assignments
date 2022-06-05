@@ -22,7 +22,7 @@ if number.startswith("-") or "." in number or "," in number or (not number.isdig
 else:
     for i in number:
         result += int(i) ** power
-    if int(number) == sonuc:
+    if int(number) == result:
         print(number + " is an Armstrong number.")
     else:
         print(number + " is not an Armstrong number.")
