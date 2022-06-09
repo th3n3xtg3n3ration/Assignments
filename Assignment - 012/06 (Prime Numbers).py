@@ -9,7 +9,9 @@ The desired output for n=100 :
 [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
 61, 67, 71, 73, 79, 83, 89, 97]
 """
-number = int(input("Please enter a range number: "))
+# number = int(input("Please enter a range number: "))
+
+number = 100
 prime = []
 
 for i in range(0,number):
@@ -19,7 +21,5 @@ for i in range(0,number):
                 break
         else:
             prime += [i]
-    else:
-        print(number,"is not a prime range.")
-
+            
 print(prime)
